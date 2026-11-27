@@ -35,7 +35,7 @@ function normalizeCourseName(value = "") {
 
 // Нормализация названий категорий материалов для фильтрации.
 function normalizeMaterialsSort(value = "") {
-  return String(value || "").trim().toLowerCase().replace(/ё/g, "е").replace(/[\\s_-]+/g, "");
+  return String(value || "").trim().toLowerCase().replace(/ё/g, "е").replace(/[\s_-]+/g, "");
 }
 
 function getCourseLabel(course = "") {
