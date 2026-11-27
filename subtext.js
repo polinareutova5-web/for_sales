@@ -33,6 +33,11 @@ function normalizeCourseName(value = "") {
   return aliases[raw] || aliases[compact] || compact;
 }
 
+// Нормализация названий категорий материалов для фильтрации.
+function normalizeMaterialsSort(value = "") {
+  return String(value || "").trim().toLowerCase().replace(/ё/g, "е").replace(/[\\s_-]+/g, "");
+}
+
 function getCourseLabel(course = "") {
   const normalized = normalizeCourseName(course);
   const labels = {
