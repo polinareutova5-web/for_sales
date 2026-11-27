@@ -76,7 +76,7 @@ function renderCourseProgressMeta(course) {
   if (progressEl) progressEl.textContent = progressValue + "%";
   const levelEl = document.getElementById("level");
   if (levelEl) levelEl.textContent = level || "—";
-  const rankEl = document.getElementById("school-rank");
+  const rankEl = document.getElementById("course-rank");
   if (rankEl) rankEl.textContent = rank || "";
   renderProgress(progressValue);
 }
